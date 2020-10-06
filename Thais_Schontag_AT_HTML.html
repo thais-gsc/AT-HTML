@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="jogos, tabuleiros, board, games">
+    <meta name="author" content="Thais Gadiole Schontag">
+    <title>Assessment</title>
+
+    <link rel="stylesheet" href="reset2020.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <header id="paginaInicial">
+            <h1><a href="#paginaInicial" title="Início da página"> <i class="fas fa-dice"></i></a> BUSCANDO O TABU (LEIRO)</h1>
+
+            <picture>
+                <source media="(max-width: 400px)" srcset="topo300.jpg">
+
+                <source media="(max-width: 800px)" srcset="topo500.jpg">
+
+                <img src="play-3978841_950.jpg" alt="Imagem de um tabuleiro, meeples e um dado" title="Encontre o jogo de tabuleiro perfeito para você!">
+            </picture>
+
+            <nav>
+                <ul>
+                    <li><a href="#paginaInicial" title="Início da página">Início</a></li>
+                    <li><a href="#sugestoes" title="Nossos jogos sugeridos">Sugestões</a></li>
+                    <li class="dropdown"><div class="dpdwn"> Pesquisa
+                        <div class="dropdown-content">
+                            <a href="#pesquisaNome" title="Pesquisar por nome">Nome</a>
+                            <a href="#pesquisaMin" title="Pesquisar por número mínimo de jogadores">Mínimo de jogadores</a>
+                            <a href="#pesquisaMax" title="Pesquisar por número máximo de jogadores">Máximo de jogadores</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#contato" title="Fale conosco"> Contato</a></li>
+                    <li><a href="Assessment.html" title="Questões do Assessment"> Assessment</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="sugestoes">
+                <h2>Nossas sugestões!</h2>
+                <div id="sugestao">
+                </div>
+
+                <section class="info" id="infoSugestoes">
+                    <section class="informacoes" id="info0">
+                        <section id="imgInfo">
+                            <div id="imgSug">
+                            </div>
+                        </section>
+
+                        <section class="descricao" id="descricaoSug">
+                            <div id="nomeSug"></div>
+                            <div id="jogadoresSug"></div>
+                            <div id="tempoSug"></div>
+                            <div id="idadeSug"></div>
+                        </section>
+                    </section>
+
+                    <div class="botao">
+                        <button onclick="limparSugestoes()"><i class="fas fa-redo"></i></button>
+                    </div>
+                </section>
+            </section>
+
+            <hr>
+
+            <section id="pesquisa">
+                <section id="procuraNome">
+                    <div id="pesquisaNome">
+                        <h2>Pesquisar por nome</h2>
+                        <input type="text" placeholder="Ex: Dead of Winter" id="buscaNome">
+                        <button class="botaoBusca" onclick="buscarNome()"><i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="resultados" id="resultadosNome"></div>
+                </section>
+
+                    <section class="info" id="infoNome">
+                        <section class="informacoes" id="info1">
+                            <section id="imgNome">
+                                <div id="imagemNome"></div>
+                            </section>
+
+                            <section class="descricao" id="descricaoNome">
+                                <div id="nomeNome"></div>
+                                <div id="jogadoresNome"></div>
+                                <div id="tempoNome"></div>
+                                <div id="idadeNome"></div>
+                            </section>
+                        </section>
+                    
+                    <div class="botao">
+                        <button onclick="limparNome()"><i class="fas fa-redo"></i></button>
+                    </div>
+                </section>
+            </section>
+
+                <hr>
+
+                <section id="procuraMin">
+                    <div id="pesquisaMin">
+                    <h2>Pesquisar por número mínimo de jogadores</h2>
+                    <input type="number" placeholder="Ex: 3" id="buscaMinJogadores">
+                    <button class="botaoBusca" onclick="buscarMinJogadores()"><i class="fas fa-search"></i>
+                    </button>
+                    </div>
+
+                    <div class="resultados" id="resultadosMin"></div>
+                </section>
+
+                    <section class="info" id="infoMin">
+                        <section class="informacoes" id="info2">
+                            <section id="imgMin">
+                                <div id="imagemMin"></div>
+                            </section>
+                        
+
+                            <section class="descricao" id="descricaoMin">
+                                <div id="nomeMin"></div>
+                                <div id="jogadoresMin"></div>
+                                <div id="tempoMin"></div>
+                                <div id="idadeMin"></div>
+                            </section>
+                        </section>
+
+                        <div class="botao">
+                            <button onclick="limparMin()"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </section>
+
+                <hr>
+
+                <section id="procuraMax">
+                    <div id="pesquisaMax">
+                        <h2>Pesquisar por número máximo de jogadores</h2>
+                        <input type="number" placeholder="Ex: 8" id="buscaMaxJogadores">
+                        <button class="botaoBusca" onclick="buscarMaxJogadores()"><i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="resultados" id="resultadosMax"></div>
+                </section>
+                
+                <section class="info" id="infoMax">
+                    <section class="informacoes" id="info3">
+                        <section id="imgMax">
+                            <div id="imagemMax"></div>
+                        </section>
+
+                        <section class="descricao" id="descricaoMax">
+                            <div id="nomeMax"></div>
+                            <div id="jogadoresMax"></div>
+                            <div id="tempoMax"></div>
+                            <div id="idadeMax"></div>
+                        </section>
+                    </section>
+                    
+                    <div class="botao">
+                        <button onclick="limparMax()"><i class="fas fa-redo"></i></button>
+                    </div>
+                </section>
+
+            <hr>
+
+            <section id="contato">
+                <h2>Fale conosco</h2>
+                <p>Sugestões, elogios ou críticas? Contate-nos!</p>
+
+                <form>
+                    <div class="form">
+                    <input type="text" name="nome" placeholder="Nome" required>
+                    </div>
+                    <div class="form">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form">
+                        <textarea name="comentario" cols="50" rows="10" placeholder="Seu comentário" required></textarea>
+                    </div>
+                    <button>Enviar</button>
+                </form>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <section>
+                © Thaís Gadiole Schöntag - Instituto Infnet - <a href="https://api.boardgameatlas.com/api/docs" title="Link para a API utilizada neste projeto"> API Board Game Atlas</a>
+            </section>
+
+            <section id="social">
+                <section class="social">
+                    <a href="https://www.linkedin.com/in/tgschontag/" title="Linkedin"> 
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </section>
+
+                <section class="social">
+                    <a href="https://www.facebook.com/thaisgsc" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </section>
+
+                <section class="social">
+                    <a href="https://www.instagram.com/thaisgsc/" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </section>
+            </section>
+
+            <section>
+                <a href="#paginaInicial" title="Voltar para o início da página"><i class="fas fa-angle-double-up"></i></a>
+            </section>
+        </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/3649e75908.js" crossorigin="anonymous"></script>
+    <script src="Thais_Schontag_AT_BG.js"></script>
+</body>
+</html>

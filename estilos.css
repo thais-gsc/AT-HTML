@@ -1,0 +1,316 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+    line-height: 1.5em;
+    background-image: url(https://cdn.pixabay.com/photo/2015/10/28/15/19/figures-1010678_960_720.jpg);
+    background-color: rgb(255, 221, 221);
+}
+
+button {
+    border-radius: 50px;
+    border: hidden;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+}
+
+button, :placeholder-shown, textarea, input {
+    font-family: 'Cabin', sans-serif;
+}
+
+div{
+    margin: 20px 20px;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 50px;
+    color: white;
+    background-color: rgb(32, 32, 32);
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer section {
+    margin-bottom: 0;
+}
+
+form button {
+    width: 310px;
+}
+
+h1 {
+    font-family: 'Mali', cursive;
+    position: relative;
+    top: 60px;
+    color: white;
+    margin-left: 30px;
+    font-size: 2.5em;
+    text-shadow: 3px 3px 3px black;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+header {
+    margin-left: 5px;
+}
+
+hr {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+input {
+    border-radius: 10px;
+    border: 1.2px solid ;
+} 
+
+li:hover {
+    transform: scale(1.3);
+}
+
+main {
+    text-align: center;
+}
+
+nav {
+    bottom: 60px;
+    text-align: right;
+    position: relative;
+    margin-right: 5px;
+    color: white;
+    background-color:  rgba(22, 22, 22, 0.534);
+    padding: 15px;
+}
+
+section {
+    margin-bottom: 15px;
+}
+
+section img {
+    margin: 15px 15px 15px 15px;
+    cursor: pointer;
+    padding: 25px;
+    transition: 0.5s ease all;
+}
+
+section img:hover {
+    transform: scale(1.3);
+}
+
+textarea {
+    resize: vertical;
+    border-radius: 5%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* CLASSES */
+
+.botao button{
+    height: 30px;
+    width: 50px;
+    font-size: 1.2em;
+}
+
+.botaoBusca {
+    height: 20px;
+}
+
+.descricao {
+    margin-top: 70px;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 2px 5px 5px black;
+    color: white;
+    border-radius: 10%;
+    height: 250px;
+    padding: 30px;
+    font-size: 1.2em;
+}
+
+.dpdwn {
+    display: flex;
+    margin: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(241, 241, 241);
+    text-shadow: none;
+    text-align: justify;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content:hover .dropdown-content {
+    display: block;
+}
+
+.dpdwn:hover .dropdown-content {
+    display: block;
+}
+
+.info {
+    display: none;
+    margin-left: 70px;
+    width: 80%;
+}
+
+.infoImagem:hover {
+    cursor: zoom-in;
+    transform: scale(1.1);
+}
+
+.resultados {
+    width: 80%;
+    margin-left: 100px;
+}
+
+.social {
+    margin-left: 20px;
+}
+
+/* IDS */
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.950);
+}
+
+#social {
+    display: flex;
+}
+
+@media (max-width: 800px) {
+    #container {
+        width: 500px;
+    }
+
+    .descricao {
+        margin-top: 50px;
+        padding: 10px;
+        font-size: 0.8em;
+        border-radius: 20%;
+        height: 200px;
+        width: 70%;
+    }
+
+    .info {
+        margin-top: 10px;
+        margin-left: 0;
+        width: 90%;
+    }
+
+    body {
+        font-size: 0.7em;
+    }
+
+    h1{
+        font-size: 2em;
+        top: 40px;
+        margin-left: 20px;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    header {
+        margin-left: 0;
+    }
+
+    nav {
+        bottom: 52px;
+        margin-right: 0;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    #container {
+        width: 300px;
+    }
+
+    .descricao {
+        margin-top: 50px;
+        padding: 5px;
+        font-size: 1em;
+        text-align: center;
+        border-radius: 20%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .descricao div {
+        margin-bottom: 1px;
+    }
+
+    .info {
+        display: none;
+        margin-left: 0;
+        width: 90%;
+    }
+
+    body {
+        font-size: 0.5em;
+    }
+
+    form button {
+        width: 100px;
+    }
+
+    h1{
+        font-size: 2em;
+        top: 30px;
+        margin-left: 10px;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    nav {
+        bottom: 35px;
+        margin-right: 0;
+        padding: 5px;
+    }
+
+    textarea {
+        width: 150px;
+    }
+}
